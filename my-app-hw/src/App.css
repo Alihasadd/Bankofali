@@ -2,7 +2,7 @@
   text-align: center;
   height: 40vmin;
   pointer-events: none;
-  background-color: #282c34;
+  padding: 10px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,3 +13,29 @@
   color: #61dafb;
 }
 
+
+button {
+  color: #61dafb;
+  width: 200px;
+  height: 75px;
+  background-color: #373b41;
+  border-color: antiquewhite;
+  border-radius: 8%;
+  padding: 10px;
+}
+
+#light {
+  background-color: #282c34;
+}
+
+#dark {
+  background-color: #0e1117;
+}
+
+.switch {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+} 
