@@ -10,22 +10,37 @@ import ReactSwitch from 'react-switch';
 
 function App() {
 const[counterNumber, setCounter] = useState(0);
+const [userInput, currentInput] = useState('');
+const [events, setEvent] = useState(0);
 //Ali
 //const[theme, setTheme] = useState('light')
 //const toggleTheme = () => {
  // setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
 //};
 
-//useEffect(() => {
-//  document.addEventListener('input', onChange)
-//});
+useEffect(() => {
+  document.title = `Counter value is ${counterNumber}`
+}, []);
+
+
+
+//trying to input a value to the counter
+function addCount(){
+  if (userInput !=='') {
+    setCounter(counterNumber + parseInt(userInput));// not sure how to tell this value where to be
+    console.log(userInput)
+    setEvent(events + 1 );
+  }
+}
 
 
 function countClick(){
+  setEvent(events + 1 );
   setCounter(counterNumber+1);
 }
 
 function countClickDown(){
+  setEvent(events + 1 );
   setCounter(counterNumber-1);
 }
 
@@ -40,10 +55,10 @@ function countClickReset(){
 return(
  // <ThemeContext.Provider value={theme, setTheme}>
   <div>
-    
+    <h1>Calculated: {events}</h1>
     <span>{counterNumber}</span>
 
-    <br></br>
+    <br/>
 
   <button onClick={countClick}>
     Add +1
@@ -58,8 +73,9 @@ return(
   </button>
   {/*Alis changes */}
 
-  <input >
+  <input type="text" value={userInput} onChange={(event) => {currentInput(event.target.value)}}>
   </input>
+  <button onClick={addCount}>Add Value</button>
 
   <button >Dark/light mode</button>
 
