@@ -14,25 +14,11 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-        </Routes>
-
-
-        <Routes>
           <Route path="/about" element={<About />} />
-        </Routes>
-
-        <Routes>
           <Route path="/blog" element={<Blog />} />
-        </Routes>
-
-        <Routes>
           <Route path="/create" element={<Create />} />
           
         </Routes>
-
-        <switch>
-          
-        </switch>
       </div>
 
     </div>
