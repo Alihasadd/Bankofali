@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createStore } from "redux"
 import Bankaccount from './Bankaccount'
 
 
@@ -10,6 +11,6 @@ function App() {
       <Bankaccount />
     </>
   )
-}
+};
 
 export default App
